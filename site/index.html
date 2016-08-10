@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>David Chu's China Bistro</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            // create the image rotator
+            setInterval("rotateImages()", 4000);
+        });
+
+        function rotateImages() {
+            var oCurPhoto = $('#photoShow div.current');
+            var oNxtPhoto = oCurPhoto.next();
+            if (oNxtPhoto.length == 0)
+                oNxtPhoto = $('#photoShow div:first');
+
+            oCurPhoto.removeClass('current').addClass('previous');
+            oNxtPhoto.css({ opacity: 0.0 }).addClass('current').animate({ opacity: 1.0 }, 1000,
+                function() {
+                    oCurPhoto.removeClass('previous');
+                });
+        }
+    </script>
+<style type="text/css">
+#photoShow {
+    height:400px;
+    width:300px;
+}
+#photoShow div {
+   margin-top: 20px;
+    position:absolute;
+    z-index: 0;
+}
+#photoShow div.previous {
+    z-index: 1;
+}
+#photoShow div.current {
+    z-index: 2;
+}
+
+</style>
+
+  </head>
+<body>
+
+  <header>
+
+
+    <nav id="header-nav" class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="index.html" class="pull-left visible-md visible-lg">
+            <div id="logo-img"></div>
+          </a>
+
+          <div class="navbar-brand">
+            <h1>SHRI BRAHMAN SABHA </h1>
+           <h2>(Tilak Nagar , Delhi Pradesh)</h2>
+          </div>
+         
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        
+        <div id="collapsable-nav" class="collapse navbar-collapse">
+           <ul id="nav-list" class="nav navbar-nav navbar-right">
+            <li class="visible-xs active">
+              <a href="index.html">
+                <span class="glyphicon glyphicon-home"></span> Home</a>
+            </li>
+            <li>
+              <a href="index.html">
+                <span class="glyphicon glyphicon-home"></span><br class="hidden-xs"> Home</a>
+            </li>
+            <li>
+              <a href="aboutus.html">
+                <span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs"> About Us</a>
+            </li>
+            <li>
+              <a href="belief.html">
+                <span class="glyphicon glyphicon-grain"></span><br class="hidden-xs"> Beliefs</a>
+            </li>
+             <li>
+              <a href="events.html">
+                <span class="glyphicon glyphicon-facetime-video"></span><br class="hidden-xs"> Events & Activities</a>
+            </li>
+            <li>
+              <a href="members.html">
+                <span class="glyphicon glyphicon-user"></span><br class="hidden-xs"> Members</a>
+            </li>
+            <li>
+              <a href="recognitions.html">
+                <span class="glyphicon glyphicon-certificate"></span><br class="hidden-xs"> Recognitions</a>
+            </li>
+            <li>
+              <a href="contact.html">
+                <span class="glyphicon glyphicon-earphone"></span><br class="hidden-xs"> Contact Us</a>
+            </li>
+            <!--<li id="phone" class="hidden-xs">
+              <a href="tel:410-602-5008">
+                <span>410-602-5008</span></a><div>* We Deliver</div>
+            </li>         phone number          -->
+          </ul><!-- #nav-list -->
+        </div><!-- .collapse .navbar-collapse -->
+      </div><!-- .container -->
+    </nav><!-- #header-nav -->
+  </header>
+
+  <div id="call-btn" class="visible-xs">
+    <a class="btn" href="tel:410-602-5008">
+    <span class="glyphicon glyphicon-earphone"></span>
+    
+    </a>
+  </div>
+  <div id="xs-deliver" class="text-center visible-xs">* We Deliver</div>
+
+
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    
+  </ol> 
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <<img width="350" height="350" src="images/be.jpg" alt="Chania">
+    </div>
+
+    <div class="item">
+      <<img width="350" height="350" src="images/specials-tile.jpg" alt="Chania">
+    </div>
+
+    
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+
+
+
+
+
+
+  <div id="main-content" class="container">
+    <div class="jumbotron">
+    <div class="media">
+  <div class="media-left">
+      <img id="ima" >
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+    <p id = "intro">The Object and motive behind launching this site is to provide a forum to all Brahmins, Take their suggestions, Take note of their grievance so far as possible and help them with the Net work of Brahmins at right place, Promote the Brahmin hood among all especially the Urban NET SAVVY YOUNSTER.
+                                                 To strengthen the age old Bond among us and help each in all aspect of life , teaching the brahminical values, and cultivate the basic thought among each us our duty towards Brahmin hood, To make us the pride that we are Brahmins. Our Moto is </p>
+
+    <p id = "moto"> " Help Brahmins without expecting any thing in return , Ask for help from fellow Brahmin as a matter of right "</p>
+
+
+
+
+<p id = "intro1">This web site has been promoted with sole object to strengthen The Brahmin Samaj. The Urban Brahmins who are drifting away from Brahminical values are apprised about the "Brahminhood", and further inculcate the spirit of the cooperation and coordination among Brahmins. It is web based conglomerate of various Brahmin Societies, Association, Trusts and organizations.</p>
+
+<div class="btn-group" role="group" aria-label="...">
+  <button type="button" class="btn">Read More</button>
+ </div> 
+
+
+ <div id="photoShow" style="margin-left: 60px;" class=" visible-sm visible-xs">
+        <div class="current">
+            <img src="images/Grass.jpg" alt="Photo Gallery" width="200" height="200" class="gallery" />
+        </div>
+        <div>
+            <img src="images/Leaf.jpg" alt="Photo Gallery" width="200" height="200" class="gallery" />
+        </div>
+        <div>
+            <img src="images/Spring.jpg" alt="Photo Gallery" width="200" height="200" class="gallery" />
+        </div>
+        <div>
+            <img src="images/Water.jpg" alt="Photo Gallery" width="200" height="200" class="gallery" />
+        </div>
+    </div>
+
+<div id="photoShow" class="visible-md">
+        <div class="current">
+            <img src="images/Grass.jpg" alt="Photo Gallery" width="300" height="300" class="gallery" />
+        </div>
+        <div>
+            <img src="images/Leaf.jpg" alt="Photo Gallery" width="300" height="300" class="gallery" />
+        </div>
+        <div>
+            <img src="images/Spring.jpg" alt="Photo Gallery" width="300" height="300" class="gallery" />
+        </div>
+        <div>
+            <img src="images/Water.jpg" alt="Photo Gallery" width="300" height="300" class="gallery" />
+        </div>
+    </div>
+
+
+<div id="photoShow" class="visible-lg">
+        <div class="current">
+            <img src="images/Grass.jpg" alt="Photo Gallery" width="400" height="400" class="gallery" />
+        </div>
+        <div>
+            <img src="images/Leaf.jpg" alt="Photo Gallery" width="400" height="400" class="gallery" />
+        </div>
+        <div>
+            <img src="images/Spring.jpg" alt="Photo Gallery" width="400" height="400" class="gallery" />
+        </div>
+        <div>
+            <img src="images/Water.jpg" alt="Photo Gallery" width="400" height="400" class="gallery" />
+        </div>
+    </div>
+
+
+
+<section class="row" id = "r1">
+      <div class="col-md-4 col-sm-4 col-xs-6 col-xxs-12">
+        <a href="single-category.html">
+          <div class="category-tile">
+            <img width="200" height="200" src="images/Grass.jpg" alt="Lunch">
+            <span>Upcoming events</span>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-6 col-xxs-12">
+        <a href="single-category.html">
+          <div class="category-tile">
+            <img width="300" height="300" src="images/psh.jpg" alt="Lunch">
+            <span>Lord Parshuram</span>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-6 col-xxs-12">
+        <a href="single-category.html">
+          <div class="category-tile">
+            <img width="300" height="300" src="images/Spring.jpg" alt="Lunch">
+            <span>Work for a cause</span>
+          </div>
+        </a>
+      </div>
+</section>
+      
+    </div>
+
+    <div id="home-tiles" class="row">
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <a href="members.html"><div id="menu-tile"><span>Members</span></div></a>
+      </div>
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <a href="photogal.html"><div id="specials-tile"><span>Events gallery</span></div></a>
+      </div>
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <a href="https://www.google.co.in/maps/place/United+Bank+Of+India+ATM/@28.6405125,77.0948252,21z/data=!4m5!3m4!1s0x0:0x4b402b9708a209f2!8m2!3d28.6404912!4d77.094776" target="_blank">
+          <div id="map-tile">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d218.85257765794455!2d77.09482523868299!3d28.640512540629427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4b402b9708a209f2!2sUnited+Bank+Of+India+ATM!5e0!3m2!1sen!2sin!4v1470650328133" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+
+     
+
+            <span>map</span>
+          </div>
+        </a>
+      </div>
+    </div><!-- End of #home-tiles -->
+  </div><!-- End of #main-content -->
+
+  <footer class="panel-footer">
+    <div class="container">
+      <div class="row">
+        <section id="hours" class="col-sm-4">
+          <span>Hours:</span><br>
+          Sun-Thurs: 11:15am - 10:00pm<br>
+          Fri: 11:15am - 2:30pm<br>
+          Saturday Closed
+          <hr class="visible-xs">
+        </section>
+        <section id="address" class="col-sm-4">
+          <span>Address:</span><br>
+          13/5 - b<br>
+          Tilak Nagar, New Delhi-110018
+      
+        </section>
+<section id="links" class="col-sm-4">
+<a href="https://www.facebook.com/shribrahmansabha.tngr" target="blank"><div id="fb"></div></br></a>
+        <a href="members.html"><div id="twitter"></div></br></a>
+        <a href="members.html"><div id="youtube"></div></br></a>
+   
+         </li>
+        </section>
+      </div>
+      
+  </footer>
+
+  <!-- jQuery (Bootstrap JS plugins depend on it) -->
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
